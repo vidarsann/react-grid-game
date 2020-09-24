@@ -1,0 +1,18 @@
+.gridElement {
+    border: 1px solid black;
+    height: 70px;
+    width: 70px;
+    background-color: lightblue;
+}
+
+.gridElement:hover{
+    background-color: #438ce0;
+}
+
+.gameGrid {
+    display: flex;
+    margin: auto;
+    top: 500px;
+    flex-wrap: wrap;
+    width: 720px;
+}
