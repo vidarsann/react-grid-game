@@ -1,16 +1,21 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './style.css'
 
-function ControlPanel () {
+function ControlPanel (props) {
+    function handleSubmit (e) {
+        e.preventDefault();
+    }
 
-    function handleSubmit (event) {
-        console.log(event)
+    function handleChange (e) {
+        e.preventDefault();
+        props.columnChangeHandler(e.target.value)
+        console.log(e.target.value)
     }
 
     return(
         <form onSubmit={handleSubmit}>
             <label>
-                <input placeholder="Highlight a column..."></input>
+                <input value={props.highlightedColumn} onChange={handleChange}></input>
             </label>
             <button type="submit">Go!</button>
         </form> 
