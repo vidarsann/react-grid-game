@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './style.css'
 
 function WorldRender () {
@@ -26,11 +26,18 @@ function WorldRender () {
             }
         }
 
+        const ReactGridElement = (elementNumber) => {
+            const [isHighlighted, setIsHighlighted] = useState(false)
+            return(
+                <div className={`gridElement ${"gridNumber" + elementNumber} ${rowAssigner(elementNumber)} ${columnAssigner(elementNumber)}`} style={{backgroundColor: "lightblue"}}></div>
+            )
+        }
+
         //Creates 100 divs representing a grid element each and assigns elements unique class names/combinations
         for(let i=0; i<10*10; i++){
-            gridArray.push(<div className={`gridElement ${"gridNumber" + i} ${rowAssigner(i)} ${columnAssigner(i)}` }>
-                
-            </div>)
+            gridArray.push(<ReactGridElement
+                elementNumber={i}
+            />)
         }
 
         return(

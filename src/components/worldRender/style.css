@@ -12,7 +12,6 @@
 .gameGrid {
     display: flex;
     margin: auto;
-    top: 500px;
     flex-wrap: wrap;
     width: 720px;
 }
