@@ -1,3 +1,9 @@
+## Purpose
+
+This is a personal exercise in react. My plan is to create a dynamic grid network to be able to create game(s) from it.
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
