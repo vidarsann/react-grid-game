@@ -1,9 +1,15 @@
-.gridElement {
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+/* .gridElement {
     border: 1px solid black;
     height: 70px;
     width: 70px;
     background-color: lightblue;
-}
+} */
 
 .gridElement:hover{
     background-color: #438ce0;
@@ -13,5 +19,11 @@
     display: flex;
     margin: auto;
     flex-wrap: wrap;
-    width: 720px;
+    width: 640px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
